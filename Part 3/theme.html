@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{Title}</title>
+    </head>
+    <body>
+    <div>
+        <header>
+            <h1><a href="{BlogURL}">{Title}</a></h1>
+            {Description}
+        </header>
+
+        <nav>
+            {block:HasPages}
+                {block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
+            {/block:HasPages}
+        </nav>
+
+        {block:Posts}
+            <article>
+
+            {block:Text}
+                {block:Title}<h2>{Title}</h2>{/block:Title}
+                {Body}
+            {/block:Text}
+
+            </article>
+        {/block:Posts}
+
+        <footer>
+
+        </footer>
+
+     </div>
+    </body>
+</html>
